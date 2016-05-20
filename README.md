@@ -2,16 +2,37 @@
 
 Multicolor SVGs as CSS backgrounds.
 
-[See it live](http://ohanhi.github.io/svg-css-backgrounds/)
+[See it live!](http://ohanhi.github.io/svg-css-backgrounds/) :tada:
 
 
 ## How to do this
 
-1. `encodeURIComponent('<svg xmlns="http...></svg>')`
-2. Make that into a background image: `url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http...)`
-3. (optional) Using Sass, Less or PostCSS? Replace each color occurrence with a variable for custom coloring, e.g. `...stroke%3A%23#{$icon-main-color}%3Bstroke-linecap%...`. You might also like to have a function for the icons, see below.
-4. Done!
+1. In browser console:<br>
+```js
+encodeURIComponent('<svg xmlns="http...></svg>')
+```
+<br> OR on Node:
+```js
+encodeURIComponent(fs.readFileSync('icon.svg', 'utf-8'))
+```
+2. Make that into a background image:
+```css
+.icon {
+      background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http...);
+}
+```
+3. Done!
 
+
+_Using Sass, Less or PostCSS?_
+
+You can replace each color occurrence with a variable for custom coloring, e.g.
+
+```
+...stroke%3A%23#{$icon-main-color}%3Bstroke-linecap%...
+```
+
+You might also like to have a function for the icons, see below.
 
 ## Helper function for icons
 
