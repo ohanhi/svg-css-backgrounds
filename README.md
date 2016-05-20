@@ -7,21 +7,21 @@ Multicolor SVGs as CSS backgrounds.
 
 ## How to do this
 
-1. In browser console:
-    ```js
-    encodeURIComponent('<svg xmlns="http...></svg>')
-    ```
-    OR on Node:
-    ```js
-    encodeURIComponent(fs.readFileSync('icon.svg', 'utf-8'))
-    ```
-2. Make that into a background image:
-    ```css
-    .icon {
-      background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http...);
-    }
-    ```
-3. Done!
+1\. In browser console:
+```js
+encodeURIComponent('<svg xmlns="http...></svg>')
+```
+OR on Node:
+```js
+encodeURIComponent(fs.readFileSync('icon.svg', 'utf-8'))
+```
+2\. Make that into a background image:
+```css
+.icon {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http...);
+}
+```
+3\. Done!
 
 
 ### Using Sass, Less or PostCSS?
